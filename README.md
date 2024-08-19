@@ -1,3 +1,11 @@
+FILES:
+
+Scrape Script: Python code used to scrape the website. 
+
+Transform Data: Python code used to transform the data. 
+
+Tableau Dashboard: https://public.tableau.com/app/profile/anders.lind4378/viz/Ejendomsvurderingscrapepresentation/Dashboard2?publish=yes#WelcomeQuestionnaire
+
 The idea came after the new evaluations for housing market in Denmark was published in 2023. No matter what address you would search for most of the URL would stay same only with a change in the ID number. I tried to change the ID to 1, 2, 3, 4, 5 to see if it would bring out a match, and it did. I’m not totally sure how the dictionary database has all the addresses stored. It seems like it goes from ID= 1 where 1 starts in the capital Copenhagen and my guess is it takes the surrounding cities from there. 
 
 The information I wanted from the website was embedded in a HTML H1 tag. The H1 Tag itself containted the city, region, address, street, floor and number. The actual ejendomsværdi and grundværdi number were inside the tag under a DT and DD tag. These components were my target for the script. 
@@ -14,3 +22,7 @@ However, I quickly found out that such detailed map data isn’t just something 
 Also, when I shuffled around with the data in tableau I quickly realized that the transformation made earlier on had some minor errors regarding the floor and number columns. This rather small errors give a huge amount of nulls in tableau (nice). Which meant that the actual useable data was over halved. (again, nice) This might be something I’ll take a deeper look into later on.
 
 But nevertheless, I still think some useful insights came to light. Which is showcased in the tableau dashboard. Cheers. 
+
+
+
+
